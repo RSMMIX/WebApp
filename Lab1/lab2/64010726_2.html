@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+<style>
+    body {
+        margin: auto;
+        width: 70%;
+    }
+
+    .group{
+        margin: 0 10% 0 10%;
+    }
+    .top h1 {
+        color: blue;
+        background-color: gold;
+        text-align: center;
+    }
+
+    .article h2 {
+        color: plum;
+        text-align: center;
+    }
+
+    .reporter {
+        color: blue;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .reporter time {
+        color: rgb(255, 102, 181);
+    }
+
+    .reporter img {
+        float: right;
+        
+        border: 3px blue solid;
+    }
+
+    aside {
+        margin: 0 10% 0 0 ;
+        padding-right: 10%;
+        max-width: 190px;
+        float: right;
+        font-size: 34px;
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+    }
+
+    article {
+        display: flex;
+    }
+    .col2 {
+        float: right;
+        padding-left: 17%;
+    }
+
+    aside {
+    width: 100%;
+    padding-right: 25%;
+    margin: 0;
+    transform: translateY(-18px);
+    font-size: 32px;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+}
+
+
+    .luckd {
+        width: 35%;
+    }
+
+    footer {
+        text-align: center;
+        color: blue;
+        background-color: gold;
+
+    }
+</style>
+
+
+<body>
+    <header class="top">
+        <h1>SW Studio Today</h1>
+    </header>
+    <header class="article">
+        <h2>The record of the CSS class</h2>
+    </header>
+    <div class="group">
+
+        <div class="reporter">
+            <img src="https://previews.123rf.com/images/gmast3r/gmast3r1809/gmast3r180900199/109840480-brunette-businessman-avatar-man-face-profile-icon-concept-online-support-service-male-cartoon-charac.jpg"
+                alt="picture" width=200>Reported by <br>MS. Rattanaporn Simchainuek<br> Moji <br> ID 64010726<br><br><time
+                datetime="2023-01-26">January 26, 2023</time>
+    
+        </div>
+        <article>
+            <section class="col1">
+                <h3>Introduction</h3>
+                <p>describe your background about CSS e.g.
+                <ul>
+                    <li>do you know CSS?</li>
+                    <li>Have you ever been using CSS?</li>
+                    <li>Have you ever worked with CSS before?</li>
+                    <li>Have you any idea how CSS works?</li>
+                    <li>What are you expecting from CSS?</li>
+                    <li>etc.</li>
+                </ul>
+            </section>
+    
+            <section class="col2">
+                <h3>The expectation</h3>
+                <p>Describe your expectations for today's class</p>
+                <p>You can list it like this:</p>
+                <ol>
+                    <li>expect #1</li>
+                    <li>expect #2</li>
+                    <li>expect #3</li>
+                </ol>
+            </section>
+        </article>
+    
+        <aside>
+            <p><em>your quote of today's class</em></p>
+        </aside>
+    
+        <section class="prog">
+            <p>Progress of today's class <progress value="2" max="5"></progress></p>
+        </section>
+    
+        <section class="luckd">
+            <p>register for lucky draw</p>
+            <form>
+                <fieldset>
+                    <label>Name:</label><em>*</em> <input type="text" id="name" placeholder="John Smith" autofocus
+                        required><br>
+                    <label>email:</label><em>*</em> <input type="email" id="email" placeholder="abc@def.com" autofocus
+                        required><br>
+                    <label>Tel:</label><em>*</em> <input type="tel" id="tel" placeholder="0xx-xxxxxxx"
+                        pattern="[0-9]{3}-[0-9]{7}" autofocus required><br>
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </section>
+    </div>
+    <footer>
+        ce.kmitl all rights reserved & copyright 2020
+    </footer>
+</body>
+
+</html>
