@@ -28,13 +28,24 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto ">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link me-5" href="#">Template</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#akita">Akita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#samoyed">Samoyed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#shiba">Shiba</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#german">German-Shepherd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#credits">Credits</a>
+                    </li>
                 </div>
 
             </div>
@@ -56,7 +67,7 @@
                     </div>
                 </div>
                 <!-- Image -->
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <!-- <img src="assets/img/hero-img.svg" alt="hero-img" class="w-100"> -->
                     <img src="https://www.linkpicture.com/q/mPngtreemcartoon-cat-element_5450314_1.png" alt=""
                         class="w-100">
@@ -72,7 +83,7 @@
 </html>
 
 <style>
-    *{
+    * {
         font-family: 'Hind', sans-serif;
         font-family: 'Signika', sans-serif;
         font-weight: bold;
@@ -87,31 +98,37 @@
     }
 
     .col-md-6 .text h1 {
-        font-size: 60px;
-        margin-top: 22%;
+        font-size: 70px;
+        margin-top: 20%;
     }
 
     .col-md-6 .text p {
         font-size: 20px;
         color: rgb(96, 95, 94);
     }
-    .container a{
+
+    .container a {
         font-size: 20px;
     }
 
-    .button a{
+    .button a {
         padding: 10px 18px;
         text-decoration: none;
         font-weight: bold;
         margin-top: -15px;
-        
+
     }
-    
-    .navbar-nav a{ 
+
+    .navbar-nav a {
         font-size: 18px;
     }
 
-    .container .navbar-brand{
+    .nav-link:hover{
+        text-decoration: underline;
+        transition: all 0.2s;
+    }
+
+    .container .navbar-brand {
         font-size: 30px;
     }
 
@@ -119,8 +136,11 @@
         margin-top: 25%;
     } */
 
-    .text p{
+    .text p {
         margin-top: 5%;
     }
 
+    /* .nav-item a{
+        color: black;
+    } */
 </style>
