@@ -15,13 +15,13 @@
 
 <body>
     <!-- Navbar section -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md  fixed-top">
         <div class="container">
 
             <!-- Brand here -->
-            <a class="navbar-brand text-drak font-weight-bold px-sm-3" href="#home">CATS</a>
+            <a class="navbar-brand text-drak font-weight-bold px-sm-3" href="#home">CAFA NARI CATS</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            <button class="navbar-toggler bg-gradient " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,19 +51,20 @@
             </div>
         </div>
     </nav>
-    <!-- Hero section -->
-    <section class="hero">
+    <!-- Hero catb section -->
+    <section class="hero cat">
         <div class="container">
             <div class="row">
                 <!-- Text -->
                 <div class="col-md-6">
                     <div class="text text-center" style=" margin-top: 5%;">
-                        <h1>Do you link <span>cat ?</span></h1>
-                        <p>lpsum is simply dummy text of the printing and typesetting industry. <br> lpsum has been the
-                            industry's standard dummmy</br></p>
+                        <h1>Do you like <span>cat ?</span></h1>
+                        <!-- <p>lpsum is simply dummy text of the printing and typesetting industry. <br> lpsum has been the
+                            industry's standard dummy</br></p> -->
+                            <p>Anyone who likes cats can be called a cat slave, but with the limitations of prohibiting pets in condos or working that have to travel so often that pets cannot be raised. You can come to <cafa>CAFA NARI CATS.</cafa></p>
                     </div>
                     <div class="button btn-warning col-sm-12 text-center text-light py-5">
-                        <a href="#" class="btn btn-warning text-dark btn-secondary ms-3">Study case</a>
+                        <a href="#about" id="about" class="btn btn-warning text-dark btn-secondary ms-3">Start cafa</a>
                     </div>
                 </div>
                 <!-- Image -->
@@ -75,6 +76,18 @@
             </div>
         </div>
     </section>
+
+    
+    <!-- Setup section -->
+    <section class="setup">
+        <div class="container">
+            <div class="text-header text-center" id="#about" style="width: 80%; margin: auto; padding: 10% 0 5% 0;">
+                <h3>About Cafa Cats</h3>
+                <p><cafes> Cat cafes originated in Taiwan</cafes>,  with one opening in Taipei in 1998. who enjoyed the opportunity to interact with some furry friends. can come to use the service in the cafe Pastries are served along with a small main dish, coffee or tea, and special rates for petting. with many promotions</p>
+            </div>
+            
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
@@ -83,23 +96,31 @@
 </html>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
     * {
         font-family: 'Hind', sans-serif;
         font-family: 'Signika', sans-serif;
         font-weight: bold;
     }
 
-    .col-md-6 img {
-        margin-top: -9%;
-    }
-
     span {
         color: rgb(255, 55, 0);
     }
 
+    cafa{
+        color: rgb(245, 123, 146);
+    }
+
+    cafes{
+        text-decoration: underline;
+    }
+
     .col-md-6 .text h1 {
         font-size: 70px;
-        margin-top: 20%;
+        margin-top: 28%;
     }
 
     .col-md-6 .text p {
@@ -119,6 +140,10 @@
 
     }
 
+    .navbar{
+        background-color:rgb(246, 193, 223); 
+    }
+
     .navbar-nav a {
         font-size: 18px;
     }
@@ -132,15 +157,8 @@
         font-size: 30px;
     }
 
-    /* .text h1{
-        margin-top: 25%;
-    } */
-
     .text p {
         margin-top: 5%;
     }
 
-    /* .nav-item a{
-        color: black;
-    } */
 </style>
