@@ -8,47 +8,82 @@
     </div>
     <script>
 
-        let main_container = document.getElementById("main_container");
+        const main_container = document.getElementById("main_container");
+        main_container.style.height = "70vh"
+        main_container.style.width = "98vw"
+        // main_container.style.background = "red"
 
         //header text
-        let headerText = document.createElement("h2");
-        headerText.innerHTML = "Exercise 04: JavaScript&DOM";
-        main_container.appendChild(headerText);
+        const headerContainer = document.createElement("div");
+        headerContainer.classList.add('header-container')
+        headerContainer.innerHTML = "<h1>Exercise 04: JavaScript&DOM</h1>";
+        headerContainer.style.height = '100px'
+        headerContainer.style.width = '100%'
+        // headerContainer.style.background = "blue"     
+        headerContainer.style.position = "relative"
+        main_container.appendChild(headerContainer);
 
         //text
-        let displayTime_button = document.createElement("button");
+        const displayTime_button = document.createElement("button");
         displayTime_button.innerHTML = "Click me to display Date and Time";
-        main_container.appendChild(displayTime_button);
-
+        headerContainer.appendChild(displayTime_button);
+        displayTime_button.style.position = 'absolute'
+        displayTime_button.style.bottom = '0'
+       
+        //worker
+        let worker = null;
+        let createWorker = () =>{
+            let my_worker = new Worker("./64010726.js");
+            // displayTime_button.style.visibility = "hidden";
+            // changeColor();
+            // displayTime_button.innerHTML = new Date().toString();
+            // displayTime_button.hidden = false;
+            my_worker.onmessage = (message) =>{
+                console.log(message)
+                displayTime_button.innerHTML = message.data;
+                changeColor();
+            }
+            return my_worker;
+        };
 
         //button
-        displayTime_button.onclick = () => {
-            setInterval(function () {
-                displayTime_button.innerHTML = new Date().toString();
-                displayTime_button.style.position = "absolute";
-                displayTime_button.style.width = "fit-content";
-                displayTime_button.style.right = "0";
-                displayTime_button.style.top = "0";
-                // const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-                // document.body.style.backgroundColor = randomColor;
-            }, 1000);
-        }
+        let toggle_btn = false
+        displayTime_button.addEventListener("click",() =>{
+            if (!(toggle_btn)){
+                worker = createWorker()
+                displayTime_button.style.bottom = `${headerContainer.offsetHeight-displayTime_button.offsetHeight}px`
+                displayTime_button.style.right = '0'
+                // displayTime_button.innerHTML = new Date().toString();
+                worker.postMessage("test")
+               
+            }
+            else{
+                worker.terminate()
+                displayTime_button.style.bottom = '0'
+                displayTime_button.style.right = `${headerContainer.offsetWidth-displayTime_button.offsetWidth-1}px`
+            }
+            toggle_btn = !toggle_btn
+            console.log(toggle_btn)
+        });
+        
 
+        //changColorbg
+        const color_data = ['#FCF19D', '#ACFC9D', '#9DFCE6','#AFC6FC','#D8AFFC','#FCAFED']
+        let indexcolor = 0;
+        const changeColor = () =>{
+            displayTime_button.style.backgroundColor = color_data[indexcolor];
+            indexcolor += 1;
+            indexcolor %= color_data.length;
+        };
 
-
-
-
-        // function display_time() {
-        //     var x = new Date()
-        //     document.getElementById('button').innerHTML = x;
-        //     display_c();
-        // }
-
-        // setInterval(function () {
-        //     const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-        //     document.body.style.backgroundColor = randomColor;
-        // }, 1000);
-
+         //changColortext
+         const color_text = ['#FCF19D', '#ACFC9D', '#9DFCE6','#AFC6FC','#D8AFFC','#FCAFED']
+        const indexcolorText = 0;
+        const changeColorText = () =>{
+            displayTime_button.style.backgroundColor = color_text[indexcolorText];
+            indexcolorText += 1;
+            indexcolorText %= color_text.length;
+        };
 
     </script>
 </body>
