@@ -24,6 +24,7 @@
         main_container.appendChild(headerContainer);
 
         //text
+        
         const displayTime_button = document.createElement("button");
         displayTime_button.innerHTML = "Click me to display Date and Time";
         headerContainer.appendChild(displayTime_button);
@@ -42,6 +43,8 @@
                 console.log(message)
                 displayTime_button.innerHTML = message.data;
                 changeColor();
+                changeColorText();
+      
             }
             return my_worker;
         };
@@ -61,6 +64,7 @@
                 worker.terminate()
                 displayTime_button.style.bottom = '0'
                 displayTime_button.style.right = `${headerContainer.offsetWidth-displayTime_button.offsetWidth-1}px`
+
             }
             toggle_btn = !toggle_btn
             console.log(toggle_btn)
@@ -68,7 +72,7 @@
         
 
         //changColorbg
-        const color_data = ['#FCF19D', '#ACFC9D', '#9DFCE6','#AFC6FC','#D8AFFC','#FCAFED']
+        const color_data = ['#FCF19D', '#ACFC9D', '#9DFCE6','#ABCFF3','#D8AFFC','#FCAFED']
         let indexcolor = 0;
         const changeColor = () =>{
             displayTime_button.style.backgroundColor = color_data[indexcolor];
@@ -76,14 +80,40 @@
             indexcolor %= color_data.length;
         };
 
-         //changColortext
-         const color_text = ['#FCF19D', '#ACFC9D', '#9DFCE6','#AFC6FC','#D8AFFC','#FCAFED']
-        const indexcolorText = 0;
+        //changColortext
+        const color_text = ['#F90514', '#0B7B09', '#28118F','#021345','#460366','#A70631']
+        let indexcolorText = 0;
         const changeColorText = () =>{
-            displayTime_button.style.backgroundColor = color_text[indexcolorText];
+            displayTime_button.style.color = color_text[indexcolorText];
             indexcolorText += 1;
             indexcolorText %= color_text.length;
         };
+
+        //personal
+
+        const personal_container = document.createElement("div");
+        personal_container.classList.add('personalContainer')
+        personal_container.style.marginBlockStart  = '30px'
+        main_container.appendChild(personal_container);
+
+        const personal_link = document.createElement("a");
+        personal_link.innerHTML = "Personal info"
+        personal_link.style.color="violet"
+        personal_link.href='#'
+
+        personal_link.onmouseover = () =>{
+            personal_link.style.background = "yellow"
+            personal_link.style.color = "Blue"
+        };
+        personal_link.onmouseout = () =>{
+            personal_link.style.background = "transparent"
+            personal_link.style.color = "violet"
+        };
+        
+        personal_container.appendChild(personal_link);
+
+
+
 
     </script>
 </body>
