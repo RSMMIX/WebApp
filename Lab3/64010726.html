@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="main_container">
+    </div>
+    <script>
+
+        let main_container = document.getElementById("main_container");
+
+        //header text
+        let headerText = document.createElement("h2");
+        headerText.innerHTML = "Exercise 04: JavaScript&DOM";
+        main_container.appendChild(headerText);
+
+        //text
+        let displayTime_button = document.createElement("button");
+        displayTime_button.innerHTML = "Click me to display Date and Time";
+        main_container.appendChild(displayTime_button);
+
+
+        //button
+        displayTime_button.onclick = () => {
+            setInterval(function () {
+                displayTime_button.innerHTML = new Date().toString();
+                displayTime_button.style.position = "absolute";
+                displayTime_button.style.width = "fit-content";
+                displayTime_button.style.right = "0";
+                displayTime_button.style.top = "0";
+                // const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+                // document.body.style.backgroundColor = randomColor;
+            }, 1000);
+        }
+
+
+
+
+
+        // function display_time() {
+        //     var x = new Date()
+        //     document.getElementById('button').innerHTML = x;
+        //     display_c();
+        // }
+
+        // setInterval(function () {
+        //     const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        //     document.body.style.backgroundColor = randomColor;
+        // }, 1000);
+
+
+    </script>
+</body>
+
+</html>
