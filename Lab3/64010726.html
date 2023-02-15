@@ -45,6 +45,7 @@
             my_worker.onmessage = (message) => {
                 console.log(message)
                 displayTime_button.innerHTML = message.data;
+                displayTime_button.style.border= '3px black solid'
                 changeColorBg();
                 changeColorText();
 
@@ -84,7 +85,7 @@
         };
 
         //changColortext
-        const color_text = ['#F90514', '#0B7B09', '#28118F', '#021345', '#460366', '#A70631']
+        const color_text = ['#F90514', '#0B7B09', '#031D0E', '#041C48', '#490089', '#A70631']
         let indexcolorText = 0;
         const changeColorText = () => {
             displayTime_button.style.color = color_text[indexcolorText];
