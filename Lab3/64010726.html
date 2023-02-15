@@ -191,10 +191,6 @@
         let worker2 = null;
         let createWorkerImg = () => {
             let my_worker = new Worker("./64010726.js");
-            // displayTime_button.style.visibility = "hidden";
-            // changeColor();
-            // displayTime_button.innerHTML = new Date().toString();
-            // displayTime_button.hidden = false;
             my_worker.onmessage = (message) => {
                 console.log(message)
                 displayTime_button.innerHTML = message.data;
@@ -206,9 +202,9 @@
         };
 
 
-        let countClick = false
+        let isClick = false
         link.addEventListener("click", () => {
-            countClick = true
+            isClick = true
         })
 
     </script>
