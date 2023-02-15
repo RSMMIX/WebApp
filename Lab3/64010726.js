@@ -1,5 +1,5 @@
 self.onmessage =(message)=>{
-    console.log("SDfas")
+    // console.log("SDfas")
     let send_time_now = () => {
         postMessage(new Date().toString());
     };
