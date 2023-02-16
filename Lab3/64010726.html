@@ -29,7 +29,7 @@
 
         const displayTime_button = document.createElement("button");
         displayTime_button.innerHTML = "Click me to display Date and Time";
-        displayTime_button.style.marginBottom = '15px'
+        // displayTime_button.style.marginBottom = '15px'
         headerContainer.appendChild(displayTime_button);
         displayTime_button.style.position = 'absolute'
         displayTime_button.style.bottom = '0'
@@ -58,7 +58,9 @@
         displayTime_button.addEventListener("click", () => {
             if (!(toggle_btn)) {
                 worker1 = createWorker()
-                displayTime_button.style.bottom = `${headerContainer.offsetHeight - displayTime_button.offsetHeight}px`
+                displayTime_button.style.position = 'fixed'
+                // displayTime_button.style.top = '0'
+                displayTime_button.style.bottom = `${window.innerHeight - displayTime_button.offsetHeight}px`
                 displayTime_button.style.right = '0'
                 // displayTime_button.innerHTML = new Date().toString();
                 worker1.postMessage("test")
@@ -66,6 +68,7 @@
             }
             else {
                 worker1.terminate()
+                displayTime_button.style.position = 'absolute'
                 displayTime_button.style.bottom = '0'
                 displayTime_button.style.right = `${headerContainer.offsetWidth - displayTime_button.offsetWidth - 1}px`
 
@@ -106,7 +109,7 @@
 
 
         personal_container.appendChild(personal_link);
-
+        personal_container.style.marginTop = '40px'
 
         //text in personal
         const personal_ul = document.createElement('ul')
@@ -150,7 +153,7 @@
         //SnapShot 
         const snapshots_header = document.createElement('div')
         snapshots_header.classList.add('snapShot-container')
-        snapshots_header.style.marginBlockStart = "30px"
+        snapshots_header.style.marginBlockStart = "35px"
         const snapShot_text = document.createElement('h1')
         snapShot_text.innerText = "Snapshots"
         snapshots_header.appendChild(snapShot_text)
@@ -181,7 +184,7 @@
 
         //img footer
         const footer_snapeShot = document.createElement('img');
-        footer_snapeShot.style.width = "35%"
+        footer_snapeShot.style.width = "33%"
         footer_snapeShot.src = 'https://www.kmitl.ac.th/sites/default/files/2022-03/08.jpg'
 
         snapshots_header.appendChild(footer_snapeShot)
