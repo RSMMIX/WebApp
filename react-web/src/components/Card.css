@@ -1,0 +1,40 @@
+/* .Card {
+    margin: 0;
+    width: 70%;
+    border-radius: 20px;
+    border: black solid 2px;
+    background-color: bisque;
+}
+
+
+
+.upper-container img{
+    float: right;
+} */
+.Card{
+    background-color: antiquewhite;
+    height: 60vh;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.img-container img{
+    float: right;
+    margin: 20px;
+}
+
+.lower-container h3{
+    padding: 20px 0px 0px 20px;
+}
+
+.lower-container h4{
+    padding: 10px 0px 0px 20px;
+
+}
+
+.lower-container p{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 0px 0px 20px;
+}
+
