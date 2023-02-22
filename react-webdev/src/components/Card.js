@@ -1,0 +1,53 @@
+import React, { useState } from 'react'
+import '../style/Card.css'
+import Button from './ButtonVote'
+
+
+export default function Card({ food }){
+
+  const [count, setcount] = useState(0)
+  const [displayText, setDisplayText] = useState('MIN')
+
+  const handleCallback = (childVote) => {
+    setcount(childVote)
+    if(childVote > 10){
+      alert('Cannot Vote more')
+      setcount(childVote - 1)
+    }
+    else if(childVote == 10){
+      updateText('MAX')
+    }
+    else if(childVote > 0 && childVote <= 9 ){
+      updateText(childVote.toString())
+    }
+    else if(childVote == 0){
+      updateText('MIN')
+    }
+    else{
+      alert('Cannot Unvote')
+      setcount(childVote + 1)
+    }
+  }
+
+  const updateText = (text) =>{
+    setDisplayText({text})
+  }
+
+  return(
+    <div className='card-container'>
+      <div className='food-card'>
+        <div className='food-text'>
+          <h1>{food.type}</h1>
+        </div>
+        <h3>{food.name}</h3>
+        {food.datail}
+        <Button parentCallback={handleCallback} countVote={count} textBtn={displayText}/>
+        <div className='food-img'>
+          <img src='{food.img}'/>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
