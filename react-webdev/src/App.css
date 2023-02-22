@@ -2,13 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
   background-color: gray;
 }
 
-.App {
+.App-header{
+  color: #ffe100 ;
   text-align: center;
+  padding: 2rem;
 }
 
-.App-header h2{
-  color: rgb(255, 238, 0);
+.menu-container{
+  width: 65vw;
+  margin: 0.75rem auto 0 auto;
 }

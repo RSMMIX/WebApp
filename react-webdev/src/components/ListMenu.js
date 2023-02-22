@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from './Card'
 
-export default function ListMenu({ListMenu}) {
+export default function ListMenu({data}) {
     return (
-      ListMenu.map((item) =>{
-          return <Card key={item.id} food={item}/> 
+      data.map((item) =>{
+          return <Card food={item}/> 
       })
     )
   }

@@ -3,51 +3,52 @@ import '../style/Card.css'
 import Button from './ButtonVote'
 
 
-export default function Card({ food }){
+export default function Card({ food }) {
 
   const [count, setcount] = useState(0)
   const [displayText, setDisplayText] = useState('MIN')
 
   const handleCallback = (childVote) => {
     setcount(childVote)
-    if(childVote > 10){
+    if (childVote > 10) {
       alert('Cannot Vote more')
       setcount(childVote - 1)
     }
-    else if(childVote == 10){
+    else if (childVote == 10) {
       updateText('MAX')
     }
-    else if(childVote > 0 && childVote <= 9 ){
+    else if (childVote > 0 && childVote <= 9) {
       updateText(childVote.toString())
     }
-    else if(childVote == 0){
+    else if (childVote == 0) {
       updateText('MIN')
     }
-    else{
+    else {
       alert('Cannot Unvote')
       setcount(childVote + 1)
     }
   }
 
-  const updateText = (text) =>{
-    setDisplayText({text})
+  const updateText = (text) => {
+    setDisplayText(text)
   }
 
-  return(
+  return (
     <div className='card-container'>
       <div className='food-card'>
-        <div className='food-text'>
-          <h1>{food.type}</h1>
+        <div className='info'>
+          <div className='food-text'>
+            <h2>{food.type}</h2>
+            <h4>{food.name}</h4>
+            <p>{food.detail}</p>
+          </div>
+
+          <div className='food-img'>
+            <img src={food.img} />
+          </div>
         </div>
-        <h3>{food.name}</h3>
-        {food.datail}
-        <Button parentCallback={handleCallback} countVote={count} textBtn={displayText}/>
-        <div className='food-img'>
-          <img src='{food.img}'/>
-        </div>
+        <Button parentCallback={handleCallback} countVote={count} textBtn={displayText} />
       </div>
     </div>
   )
 }
-
-

@@ -1,0 +1,23 @@
+.btn-container{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 22px;
+
+}
+
+.display-vote{
+    background-color: lime;
+    border: 3px solid purple;
+    color: purple;
+    border-radius: 10px;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1.rem;
+    font-size: 2rem;
+}
+.btn{
+    padding: 12px;
+
+}
